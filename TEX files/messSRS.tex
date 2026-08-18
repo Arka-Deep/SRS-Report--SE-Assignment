@@ -1,8 +1,9 @@
+
 \documentclass[12pt,a4paper]{report}
 
-% ------------------------------------------------------------
+% ============================================================
 % PACKAGES
-% ------------------------------------------------------------
+% ============================================================
 \usepackage[a4paper,margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{float}
@@ -17,10 +18,13 @@
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 
-% ------------------------------------------------------------
+% ============================================================
 % GENERAL SETTINGS
-% ------------------------------------------------------------
+% ============================================================
 \onehalfspacing
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
 
 \hypersetup{
 	colorlinks=true,
@@ -35,12 +39,9 @@
 \fancyhead[R]{SRS Report}
 \fancyfoot[C]{\thepage}
 
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt}
-
-% ------------------------------------------------------------
+% ============================================================
 % DOCUMENT
-% ------------------------------------------------------------
+% ============================================================
 \begin{document}
 	
 	% ============================================================
@@ -52,36 +53,23 @@
 		
 		\vspace*{1cm}
 		
-		{\Large \textbf{MESS FOOD WASTAGE TRACKER AND}\\[0.3cm]
-			\textbf{MANAGEMENT SYSTEM}}\\[0.5cm]
+		{\Large\textbf{MESS FOOD WASTAGE TRACKER AND}\\[0.2cm]
+			\textbf{MANAGEMENT SYSTEM}}
 		
-		{\Large \textbf{Software Requirements Specification (SRS) Report}}
+		\vspace{0.4cm}
 		
-		\vspace{1.5cm}
+		{\large\textbf{Software Requirements Specification (SRS) Report}}
 		
-		% Replace this with your university logo
+		\vspace{4.5cm}
+		{\Large\textbf{Place Holder Cover page the actual cover has been created separately}}
+		
+		% Uncomment and modify if you have a university logo
 		% \includegraphics[width=3cm]{university_logo.png}
 		
-		\vspace{1.5cm}
+		\vspace{1cm}
 		
-		{\large \textbf{Members:}}\\[0.3cm]
-		
-		Name 1 -- Roll Number\\
-		Name 2 -- Roll Number\\
-		Name 3 -- Roll Number\\
-		Name 4 -- Roll Number
-		
-		\vspace{1.2cm}
-		
-		{\large \textbf{Submitted to:}}\\[0.3cm]
-		
-		Prof. Professor Name
-		
-		\vfill
-		
-		\textbf{University Name}\\
-		Department of Computer Science and Engineering\\
-		Academic Session 2026--2027
+	
+
 		
 	\end{titlepage}
 	
@@ -98,13 +86,11 @@
 	
 	\chapter{Abstract}
 	
-	Food wastage in institutional and college mess facilities is a common operational problem. A considerable amount of food may be prepared without accurate information about the expected number of students, while unexpected absences, changes in demand, and inaccurate estimations may further increase the quantity of leftover food.
+	Food wastage is a common problem in college and institutional messes. Food is often prepared according to estimates, but actual attendance can vary because of absences, schedule changes, or other factors. This can result in excess food and unnecessary wastage.
 	
-	The proposed \textbf{Mess Food Wastage Tracker and Management System} is a software system designed to record, monitor, analyze, and manage food wastage in a college or institutional mess. The system will allow mess administrators to maintain information about meals, the number of students expected to eat, the quantity of food prepared, the quantity consumed, and the quantity remaining or wasted.
+	The proposed \textbf{Mess Food Wastage Tracker and Management System} records meal attendance, food preparation, consumption, and wastage. It provides reports that help mess staff and administrators understand wastage patterns and make better decisions about future food preparation.
 	
-	The system will provide useful information through reports and summaries so that mess administrators can identify patterns of wastage and make better decisions regarding food preparation. Students may also be allowed to indicate their meal attendance in advance, helping the mess management estimate the expected demand more accurately.
-	
-	The system is proposed to follow the \textbf{Agile Software Development Model}. Agile development is suitable because the system can be developed incrementally and improved through continuous feedback from students, mess staff, and administrators.
+	The system follows the \textbf{Agile Software Development Model}, allowing features to be developed in small increments and improved using feedback from students, mess staff, and administrators.
 	
 	% ============================================================
 	% 2. OBJECTIVE
@@ -112,21 +98,18 @@
 	
 	\chapter{Objective}
 	
-	The primary objective of the Mess Food Wastage Tracker and Management System is to reduce unnecessary food wastage by providing a systematic method for recording and analyzing meal-related information.
+	The main objective is to reduce avoidable food wastage by maintaining accurate meal and food records.
 	
-	The major objectives of the proposed system are:
+	The system aims to:
 	
-	\begin{enumerate}
-		\item To record the number of students expected to attend each meal.
-		\item To maintain records of food prepared for breakfast, lunch, snacks, and dinner.
-		\item To record the amount of food consumed and the amount of food left over.
-		\item To calculate and track food wastage for individual meals and over longer periods.
-		\item To identify meals, days, or food items with consistently high wastage.
-		\item To help mess administrators make better food preparation decisions.
-		\item To provide reports and summaries for management and analysis.
-		\item To provide a simple interface for students and mess staff.
-		\item To maintain historical records for future planning and comparison.
-		\item To encourage efficient utilization of food resources.
+	\begin{enumerate}[leftmargin=*]
+		\item Record expected attendance for each meal.
+		\item Maintain daily menus and meal schedules.
+		\item Record prepared, consumed, and wasted food quantities.
+		\item Calculate wastage and wastage percentage.
+		\item Maintain historical records for comparison.
+		\item Generate daily, weekly, and monthly reports.
+		\item Help administrators make better food preparation decisions.
 	\end{enumerate}
 	
 	% ============================================================
@@ -137,55 +120,46 @@
 	
 	\section{Purpose}
 	
-	The purpose of this Software Requirements Specification is to define the requirements of the Mess Food Wastage Tracker and Management System. The document describes the functionality, users, constraints, interfaces, and quality requirements of the proposed system.
-	
-	The SRS provides a common understanding between developers, users, administrators, and other stakeholders regarding what the system is expected to accomplish.
+	This Software Requirements Specification defines the requirements and basic design of the Mess Food Wastage Tracker and Management System. It describes what the system should do, who will use it, and the main quality and operational requirements.
 	
 	\section{Scope}
 	
-	The system is intended for use in a college, university, hostel, institutional, or similar mess environment.
+	The system is intended for a college, hostel, or similar institutional mess. It will manage:
 	
-	The system will maintain information related to:
-	
-	\begin{itemize}
-		\item Students and users.
-		\item Daily meal schedules.
-		\item Expected meal attendance.
-		\item Food preparation quantities.
-		\item Food consumption quantities.
-		\item Leftover and wasted food.
-		\item Food items and menus.
-		\item Historical wastage data.
-		\item Reports and statistical summaries.
+	\begin{itemize}[leftmargin=*]
+		\item student meal attendance,
+		\item meal schedules and menus,
+		\item food preparation records,
+		\item food consumption records,
+		\item food wastage records, and
+		\item reports and historical data.
 	\end{itemize}
 	
-	The system will primarily focus on tracking and management of food wastage. It is not intended to replace complete hostel management, accounting, procurement, or kitchen inventory systems, although future versions may integrate with such systems.
+	The system focuses on food wastage tracking and management. Full accounting, procurement, or hostel-management functions are outside the present scope.
 	
 	\section{Definitions}
 	
 	\begin{longtable}{p{4cm}p{10cm}}
 		\toprule
-		\textbf{Term} & \textbf{Definition} \\
+		\textbf{Term} & \textbf{Meaning}\\
 		\midrule
-		Student & A person who is eligible to use the institutional mess. \\
-		Mess Administrator & Person responsible for managing the mess system and monitoring reports. \\
-		Mess Staff & Personnel responsible for food preparation and recording meal information. \\
-		Meal & A scheduled food service such as breakfast, lunch, snacks, or dinner. \\
-		Expected Attendance & Estimated number of students expected to consume a particular meal. \\
-		Prepared Quantity & Quantity of food prepared for a particular meal. \\
-		Consumed Quantity & Quantity of food actually consumed by users. \\
-		Wasted Quantity & Quantity of prepared food that remains unused or is discarded. \\
-		Wastage Rate & Percentage of prepared food that is wasted. \\
-		Menu & List of food items planned for a particular meal. \\
-		Report & A summarized presentation of recorded food and wastage data. \\
+		Student & User who may attend meals in the mess.\\
+		Mess Staff & Staff responsible for food preparation and recording meal data.\\
+		Administrator & User responsible for system and mess management.\\
+		Meal & A scheduled service such as breakfast, lunch, snacks, or dinner.\\
+		Expected Attendance & Number of students expected to attend a meal.\\
+		Prepared Quantity & Amount of food prepared for a meal.\\
+		Consumed Quantity & Amount of food consumed during a meal.\\
+		Wasted Quantity & Amount of prepared food that remains unused or is discarded.\\
+		Wastage Rate & Percentage of prepared food that is wasted.\\
+		Menu & Food items planned for a particular meal.\\
+		Report & Summary generated from stored system data.\\
 		\bottomrule
 	\end{longtable}
 	
-	\section{Overview}
+	\section{System Overview}
 	
-	The system will consist of a user-facing component through which students can indicate meal attendance and a management component through which authorized staff can enter meal and wastage information.
-	
-	The system will collect data throughout the day and use the collected information to generate useful summaries. For example, if a particular meal repeatedly has a high amount of leftover food, the administrator can review previous attendance and preparation records before adjusting future preparation quantities.
+	Students can view meal information and mark their expected attendance. Mess staff record preparation, consumption, and wastage data. Administrators manage users, meals, menus, and reports. The stored data is then used to calculate wastage and identify recurring patterns.
 	
 	% ============================================================
 	% 4. SDLC MODEL
@@ -193,71 +167,59 @@
 	
 	\chapter{SDLC Model}
 	
-	\section{Selected SDLC Model}
+	\section{Selected Model: Agile}
 	
-	The \textbf{Agile Software Development Model} has been selected for the development of the Mess Food Wastage Tracker and Management System.
+	The \textbf{Agile Software Development Model} is selected for this project. Agile develops software through repeated iterations rather than delivering the entire system at once.
 	
-	Agile is an iterative and incremental development approach in which software is developed in relatively small increments. Requirements are continuously reviewed and changes can be incorporated during subsequent development cycles.
+	For this system, the first version can provide attendance and basic wastage recording. Features such as reports, analytics, notifications, and prediction can then be added and refined in later iterations.
 	
-	For the proposed system, the initial version may contain basic features such as student meal attendance and wastage recording. Additional functionality, such as analytics, notifications, dashboards, or prediction of meal demand, can be introduced in later iterations.
+	\section{Advantages}
 	
-	\section{Advantages of the Agile Model}
-	
-	The major advantages of using Agile for the proposed system are:
-	
-	\begin{enumerate}
-		\item \textbf{Flexibility:} Requirements can be modified as feedback is obtained from students and mess staff.
-		
-		\item \textbf{Incremental Development:} The system can be developed feature by feature instead of waiting for the complete system before testing.
-		
-		\item \textbf{Continuous Feedback:} Users can review implemented features and provide suggestions for improvement.
-		
-		\item \textbf{Early Delivery:} A basic working system can be delivered early and expanded over time.
-		
-		\item \textbf{Early Detection of Problems:} Errors and usability problems can be identified during individual development iterations.
-		
-		\item \textbf{Suitable for Evolving Requirements:} Actual mess operations may reveal new requirements after the system is introduced, making an adaptable development model useful.
+	\begin{enumerate}[leftmargin=*]
+		\item \textbf{Flexible:} Requirements can change based on user feedback.
+		\item \textbf{Incremental:} Features can be developed and tested in smaller parts.
+		\item \textbf{Early feedback:} Users can test features before the complete system is finished.
+		\item \textbf{Early delivery:} A basic working version can be available quickly.
+		\item \textbf{Easy improvement:} Problems can be identified and corrected during each iteration.
 	\end{enumerate}
 	
-	\section{Disadvantages of the Agile Model}
+	\section{Disadvantages}
 	
-	The major disadvantages are:
-	
-	\begin{enumerate}
-		\item \textbf{Requires Continuous User Involvement:} Meaningful feedback from students and mess staff is important for successful development.
-		
-		\item \textbf{Changing Requirements:} Frequent changes may make planning and estimation more difficult.
-		
-		\item \textbf{Documentation May Be Reduced:} If not properly managed, emphasis on rapid iterations can result in insufficient documentation.
-		
-		\item \textbf{Scope Creep:} New feature requests may continuously increase the scope of the project.
-		
-		\item \textbf{Requires Good Team Coordination:} Frequent communication and coordination are necessary among team members.
+	\begin{enumerate}[leftmargin=*]
+		\item Requires regular feedback from users.
+		\item Frequent changes can make planning difficult.
+		\item Poorly managed iterations may lead to insufficient documentation.
+		\item Continuous feature requests can cause scope creep.
+		\item Good communication between team members is necessary.
 	\end{enumerate}
 	
-	\section{Reason for Selecting Agile}
+	\section{Why Agile Was Selected}
 	
-	Agile has been selected because the exact requirements of a mess food management system may not be completely known at the beginning of the project.
+	The requirements of a mess-management system may become clearer only after users start using it. Students, mess staff, and administrators may have different expectations from the system.
 	
-	Different users may have different expectations. Students may want a simple way to indicate whether they will attend a meal, while mess staff may require a fast interface for entering prepared and wasted quantities. Administrators may require reports, charts, and historical comparisons.
+	Agile allows the team to first implement the essential features and then improve the system based on actual feedback. This makes it more suitable than a rigid development process for the proposed system.
 	
-	Therefore, developing the system incrementally allows the team to implement the most important features first and improve the system based on stakeholder feedback.
+	A possible development sequence is:
 	
-	The proposed Agile development process can be organized into iterations such as:
-	
-	\begin{enumerate}
-		\item Requirements and initial planning.
-		\item User and meal management.
-		\item Meal attendance and demand recording.
-		\item Food preparation and wastage recording.
-		\item Reports and analytics.
-		\item Testing, feedback, and refinement.
+	\begin{enumerate}[leftmargin=*]
+		\item Requirements and planning
+		\item User and meal management
+		\item Attendance management
+		\item Food and wastage recording
+		\item Reports and analytics
+		\item Testing and refinement
 	\end{enumerate}
 	
-	% Diagram placeholder
-	\section{SDLC Model Diagram}
+	\section{Agile Model Diagram}
 	
-	\textit{Insert the Agile SDLC diagram here.}
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[
+%		width=0.85\textwidth
+%		]{diagrams/agile_model.pdf}
+%		\caption{Agile Software Development Model}
+%		\label{fig:agile-model}
+%	\end{figure}
 	
 	% ============================================================
 	% 5. OVERALL DESCRIPTION
@@ -267,87 +229,54 @@
 	
 	\section{Product Perspective}
 	
-	The Mess Food Wastage Tracker and Management System will function as an independent information management system for a college or institutional mess.
+	The proposed system is a standalone information-management system for an institutional mess. It receives information from students, mess staff, and administrators, stores it in a central database, and produces useful summaries and reports.
 	
-	The system will receive input from students and authorized mess staff. The collected information will be stored in a central database and processed to generate summaries and reports.
+	\section{Main Functions}
 	
-	The system may be implemented as a web-based application so that students and administrators can access it from computers or mobile devices connected to the appropriate network.
+	The main functions are:
 	
-	\section{Product Functions}
-	
-	The main functions of the system are:
-	
-	\begin{enumerate}
-		\item User registration and authentication.
-		\item Role-based access control.
-		\item Student meal attendance marking.
-		\item Daily menu management.
-		\item Expected meal count calculation.
-		\item Food preparation quantity recording.
-		\item Food consumption quantity recording.
-		\item Food wastage quantity recording.
-		\item Wastage percentage calculation.
-		\item Daily, weekly, and monthly reports.
-		\item Identification of high-wastage meals.
-		\item Historical data storage.
-		\item Administrative management of users and system data.
+	\begin{enumerate}[leftmargin=*]
+		\item User authentication and role management.
+		\item Meal and menu management.
+		\item Student meal attendance.
+		\item Food preparation and consumption recording.
+		\item Food wastage recording and calculation.
+		\item Historical analysis and report generation.
 	\end{enumerate}
 	
-	\section{User Characteristics}
-	
-	The proposed system will mainly have three types of users.
+	\section{Users}
 	
 	\subsection{Student}
 	
-	Students will use the system to view meal information and indicate whether they intend to attend a particular meal. Students will have limited access to management functions.
+	Students can view meals and menus, mark meal attendance, and modify their attendance within the allowed time.
 	
 	\subsection{Mess Staff}
 	
-	Mess staff will record information related to food preparation, consumption, leftovers, and wastage. They will require a simple interface because the information may need to be entered during busy kitchen operations.
+	Mess staff record prepared, consumed, and wasted quantities and can view relevant meal information.
 	
 	\subsection{Administrator}
 	
-	The administrator will have the highest level of access. The administrator will manage users, meals, menus, reports, and system configuration.
+	Administrators manage users, meals, menus, configuration, and reports.
 	
 	\section{Operating Environment}
 	
-	The proposed system may operate in the following environment:
-	
-	\begin{itemize}
-		\item Client devices: desktop computers, laptops, tablets, or smartphones.
-		\item Server: local or cloud-based application server.
-		\item Database: relational database management system.
-		\item Network: institutional network or Internet connection.
-		\item Operating systems: Windows, Linux, Android, or other systems supporting a modern web browser.
-		\item Browser: Chrome, Firefox, Edge, Safari, or equivalent modern browser.
-	\end{itemize}
+	The system may be implemented as a web application and accessed using a modern browser on a computer or mobile device. It may use a relational database and a local or cloud-based server.
 	
 	\section{Constraints}
 	
-	The following constraints may affect the system:
+	The main constraints are:
 	
-	\begin{enumerate}
-		\item Accurate reports depend on the accuracy of entered data.
-		\item Students must have access to the system to record meal attendance.
-		\item Internet or network availability may be required for a web-based implementation.
-		\item Mess staff may have limited time for entering data.
-		\item The system must protect student information from unauthorized access.
-		\item The system should remain simple enough for non-technical users.
-	\end{enumerate}
+	\begin{itemize}[leftmargin=*]
+		\item The accuracy of reports depends on the accuracy of entered data.
+		\item Students need access to the system to submit attendance.
+		\item Network availability may be required.
+		\item Mess staff may have limited time to enter data.
+		\item User information must be protected from unauthorized access.
+	\end{itemize}
 	
-	\section{Assumptions and Dependencies}
+	\section{Assumptions}
 	
-	The system assumes that:
-	
-	\begin{enumerate}
-		\item Students provide reasonably accurate meal attendance information.
-		\item Mess staff record prepared and wasted quantities regularly.
-		\item Authorized users have valid accounts.
-		\item The database remains available when information is entered.
-		\item The mess follows a defined meal schedule.
-	\end{enumerate}
-	
-	The system may depend on a database server, application server, authentication mechanism, and network connectivity.
+	The system assumes that users provide reasonably accurate information, mess staff record food quantities regularly, users have valid accounts, and the mess follows a defined meal schedule.
 	
 	% ============================================================
 	% 6. REQUIREMENT SPECIFICATION
@@ -357,449 +286,370 @@
 	
 	\section{Functional Requirements}
 	
-	The functional requirements describe the operations that the system must perform.
+	\subsection{FR1 -- Authentication and Authorization}
 	
-	\subsection{User Authentication and Authorization}
-	
-	\begin{enumerate}[label=FR1.]
+	\begin{enumerate}[leftmargin=*]
 		\item The system shall allow users to log in using valid credentials.
-		\item The system shall identify users according to their role.
-		\item The system shall restrict management functionality to authorized users.
-		\item The system shall allow administrators to activate or deactivate user accounts.
+		\item The system shall identify the user's role after login.
+		\item The system shall restrict functions according to user role.
+		\item The administrator shall be able to activate or deactivate accounts.
 	\end{enumerate}
 	
-	\subsection{Student Meal Attendance}
+	\subsection{FR2 -- Meal Attendance}
 	
-	\begin{enumerate}[label=FR2.]
-		\item The system shall display the meals available for a particular day.
-		\item The system shall allow a student to indicate attendance for a meal.
-		\item The system shall allow students to modify their attendance before the configured deadline.
-		\item The system shall record the date, meal, and student associated with the attendance entry.
-		\item The system shall calculate the expected number of students for each meal.
+	\begin{enumerate}[leftmargin=*]
+		\item The system shall display available meals for a selected day.
+		\item A student shall be able to mark attendance for a meal.
+		\item A student shall be able to modify attendance before the deadline.
+		\item The system shall store the student, meal, and date for each attendance record.
+		\item The system shall calculate expected attendance for a meal.
 	\end{enumerate}
 	
-	\subsection{Menu Management}
+	\subsection{FR3 -- Menu Management}
 	
-	\begin{enumerate}[label=FR3.]
-		\item The system shall allow authorized users to create a menu for a meal.
-		\item The system shall allow authorized users to modify menu information.
-		\item The system shall store menu history for previous meals.
+	\begin{enumerate}[leftmargin=*]
+		\item Authorized users shall be able to create and modify menus.
+		\item A menu shall be associated with a meal.
+		\item Previous menu information shall be retained as historical data.
 	\end{enumerate}
 	
-	\subsection{Food Preparation Recording}
+	\subsection{FR4 -- Food Recording}
 	
-	\begin{enumerate}[label=FR4.]
-		\item The system shall allow mess staff to record the quantity of food prepared.
-		\item The system shall associate prepared quantities with a date, meal, and food item.
-		\item The system shall allow corrections to be made by authorized users.
+	\begin{enumerate}[leftmargin=*]
+		\item Mess staff shall be able to record prepared food quantity.
+		\item The system shall associate food records with a meal and food item.
+		\item Authorized users shall be able to correct incorrect records.
 	\end{enumerate}
 	
-	\subsection{Food Consumption and Wastage Recording}
+	\subsection{FR5 -- Wastage Recording}
 	
-	\begin{enumerate}[label=FR5.]
-		\item The system shall allow mess staff to record the consumed quantity.
-		\item The system shall allow mess staff to record leftover or wasted quantity.
-		\item The system shall calculate wastage based on recorded food quantities.
+	\begin{enumerate}[leftmargin=*]
+		\item Mess staff shall be able to record consumed and wasted quantities.
+		\item The system shall calculate the remaining and wasted quantity.
+		\item The system shall calculate the wastage percentage.
 		\item The system shall maintain historical wastage records.
 	\end{enumerate}
 	
-	\subsection{Wastage Analysis}
+	\subsection{FR6 -- Analysis}
 	
-	\begin{enumerate}[label=FR6.]
-		\item The system shall calculate the wastage percentage for a meal.
-		\item The system shall allow users with appropriate permissions to view daily wastage.
-		\item The system shall provide weekly and monthly summaries.
-		\item The system shall identify meals with unusually high wastage.
-		\item The system shall support comparison of wastage across different dates and meals.
+	\begin{enumerate}[leftmargin=*]
+		\item The system shall calculate wastage for individual meals.
+		\item The system shall provide daily, weekly, and monthly summaries.
+		\item The system shall identify meals with high wastage.
+		\item The system shall support comparison of wastage across dates and meals.
 	\end{enumerate}
 	
-	\subsection{Report Generation}
+	\subsection{FR7 -- Reports}
 	
-	\begin{enumerate}[label=FR7.]
+	\begin{enumerate}[leftmargin=*]
 		\item The system shall generate daily wastage reports.
 		\item The system shall generate weekly and monthly reports.
 		\item The system shall provide attendance and preparation summaries.
-		\item The system shall provide reports that can assist management in planning future meals.
 	\end{enumerate}
 	
-	\subsection{Administration}
+	\subsection{FR8 -- Administration}
 	
-	\begin{enumerate}[label=FR8.]
-		\item The administrator shall be able to manage student and staff accounts.
-		\item The administrator shall be able to configure meal schedules.
-		\item The administrator shall be able to manage food items and menus.
-		\item The administrator shall be able to view system reports.
+	\begin{enumerate}[leftmargin=*]
+		\item The administrator shall manage student and staff accounts.
+		\item The administrator shall configure meal schedules.
+		\item The administrator shall manage food items and menus.
+		\item The administrator shall view system reports.
 	\end{enumerate}
 	
 	% ------------------------------------------------------------
-	% NON FUNCTIONAL REQUIREMENTS
+	% NON-FUNCTIONAL REQUIREMENTS
 	% ------------------------------------------------------------
 	
 	\section{Non-Functional Requirements}
 	
-	The non-functional requirements define the quality attributes and constraints of the system.
+	\subsection{NFR1 -- Performance}
 	
-	\subsection{Performance Requirements}
-	
-	\begin{enumerate}[label=NFR1.]
-		\item The system should respond to normal user requests within a reasonable time.
-		\item Frequently used operations such as viewing meals or submitting attendance should not require unnecessary processing.
-		\item Report generation should complete within an acceptable time for the expected amount of stored data.
+	\begin{enumerate}[leftmargin=*]
+		\item Common operations should respond within a reasonable time.
+		\item Attendance submission should require minimal processing.
+		\item Reports should be generated within an acceptable time.
 	\end{enumerate}
 	
-	\subsection{Security Requirements}
+	\subsection{NFR2 -- Security}
 	
-	\begin{enumerate}[label=NFR2.]
-		\item The system shall prevent unauthorized access to protected functionality.
+	\begin{enumerate}[leftmargin=*]
+		\item Unauthorized users shall not access protected functions.
 		\item Passwords shall not be stored in plain text.
-		\item Users shall only access information permitted by their roles.
-		\item Administrative operations shall be restricted to authorized personnel.
-		\item Sensitive user information shall be protected from unauthorized disclosure.
+		\item Users shall only access functions allowed by their roles.
+		\item Administrative operations shall require authorization.
 	\end{enumerate}
 	
-	\subsection{Usability Requirements}
+	\subsection{NFR3 -- Usability}
 	
-	\begin{enumerate}[label=NFR3.]
-		\item The user interface should be simple and understandable.
-		\item Common operations should require a minimum number of steps.
-		\item The interface should be usable by users with basic computer or smartphone knowledge.
-		\item The system should provide understandable validation and error messages.
+	\begin{enumerate}[leftmargin=*]
+		\item The interface should be simple and understandable.
+		\item Common operations should require few steps.
+		\item Error and validation messages should be clear.
 	\end{enumerate}
 	
-	\subsection{Reliability Requirements}
+	\subsection{NFR4 -- Reliability}
 	
-	\begin{enumerate}[label=NFR4.]
-		\item The system should maintain consistent records during normal operation.
-		\item Data should not be lost when a valid transaction has been completed.
-		\item The system should provide suitable error handling when an operation cannot be completed.
-		\item Regular database backup should be supported.
+	\begin{enumerate}[leftmargin=*]
+		\item Completed transactions should not result in data loss.
+		\item The system should handle invalid input safely.
+		\item Database backup should be supported.
 	\end{enumerate}
 	
-	\subsection{Scalability Requirements}
+	\subsection{NFR5 -- Scalability}
 	
-	\begin{enumerate}[label=NFR5.]
-		\item The system should support an increasing number of students and historical records.
-		\item The architecture should permit additional mess facilities or branches to be supported in the future.
-		\item Additional reporting and analytical features should be addable without redesigning the complete system.
+	\begin{enumerate}[leftmargin=*]
+		\item The system should support increasing numbers of users and records.
+		\item The architecture should allow additional mess facilities in the future.
 	\end{enumerate}
 	
-	\subsection{Maintainability Requirements}
+	\subsection{NFR6 -- Maintainability}
 	
-	\begin{enumerate}[label=NFR6.]
-		\item The system should use a modular architecture.
-		\item Major components should be sufficiently documented.
-		\item Changes to one feature should have minimal impact on unrelated features.
-		\item The database and application code should be organized so that future enhancements are possible.
+	\begin{enumerate}[leftmargin=*]
+		\item The system should be divided into logical modules.
+		\item Major components should be documented.
+		\item Changes to one module should have limited impact on others.
 	\end{enumerate}
 	
-	\subsection{Availability Requirements}
+	\subsection{NFR7 -- Availability}
 	
-	\begin{enumerate}[label=NFR7.]
-		\item The system should be available during normal mess operating hours.
-		\item Planned maintenance should preferably occur outside critical meal periods.
-	\end{enumerate}
+	The system should normally be available during mess operating hours. Planned maintenance should preferably be scheduled outside critical meal periods.
 	
 	% ============================================================
-	% 7. DECISION TREE AND TABLE
+	% 7. DECISION ANALYSIS
 	% ============================================================
 	
 	\chapter{Decision Analysis}
 	
 	\section{Decision Tree}
 	
-	The decision tree for the system can be based on the decision of whether food preparation should be increased, maintained, or reduced for a particular meal.
+	The decision tree determines whether preparation should be increased, maintained, or reduced using expected attendance and historical wastage.
 	
-	The major factors considered may include:
-	
-	\begin{itemize}
-		\item Expected attendance.
-		\item Historical attendance.
-		\item Quantity of food prepared.
-		\item Previous wastage.
-		\item Current menu.
-		\item Special events or unusual circumstances.
-	\end{itemize}
-	
-	For example, if expected attendance is high and previous wastage is low, the recommended action may be to maintain or increase preparation. If expected attendance is low and previous wastage is consistently high, preparation may be reduced.
-	
-	\textit{Insert the Decision Tree diagram here.}
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[
+%		width=0.90\textwidth
+%		]{diagrams/decision_tree.pdf}
+%		\caption{Decision Tree for Meal Preparation}
+%		\label{fig:decision-tree}
+%	\end{figure}
 	
 	\section{Decision Table}
 	
-	An example decision table for meal preparation is given below.
+	The following table summarizes the same decision logic.
 	
 	\begin{table}[H]
 		\centering
-		\caption{Decision Table for Food Preparation}
-		\begin{tabular}{|p{4cm}|c|c|c|c|}
+		\caption{Decision Table for Meal Preparation}
+		\small
+		\begin{tabular}{|p{4.1cm}|c|c|c|c|}
 			\hline
-			\textbf{Condition / Action} & \textbf{Case 1} & \textbf{Case 2} & \textbf{Case 3} & \textbf{Case 4} \\
+			\textbf{Condition / Action} & \textbf{R1} & \textbf{R2} & \textbf{R3} & \textbf{R4}\\
 			\hline
-			Expected attendance is high & Y & Y & N & N \\
+			Expected attendance high? & Y & Y & N & N\\
 			\hline
-			Historical wastage is high & N & Y & N & Y \\
+			Historical wastage high? & N & Y & N & Y\\
 			\hline
-			Recommended preparation & Increase & Maintain/Review & Maintain & Reduce \\
+			Increase preparation & Y & N & N & N\\
+			\hline
+			Maintain preparation & N & Y & Y & N\\
+			\hline
+			Reduce preparation & N & N & N & Y\\
+			\hline
+			Review data & N & Y & N & Y\\
 			\hline
 		\end{tabular}
 	\end{table}
 	
-	The exact thresholds for ``high attendance'' and ``high wastage'' can be configured by the system administrator.
-	
 	% ============================================================
-	% 8. DESIGN
+	% 8. SYSTEM DESIGN
 	% ============================================================
 	
 	\chapter{System Design}
 	
 	\section{DFD Level 0}
 	
-	The Level 0 Data Flow Diagram will represent the system as a single major process and show interaction with external entities such as students, mess staff, and administrators.
+	The Level 0 DFD treats the complete application as one process and shows its interaction with the three main external entities.
 	
-	\textit{Insert DFD Level 0 diagram here.}
+\begin{figure}[H]
+	\centering
+	\includegraphics[
+	width=\textwidth,
+	height=\textheight,
+	keepaspectratio
+	]{diagrams/dfd_level0.jpeg}
+	\caption{Data Flow Diagram Level 0}
+	\label{fig:dfd-level0}
+\end{figure}
 	
 	\section{DFD Level 1}
 	
-	The Level 1 DFD will decompose the main system into major processes such as:
+	The Level 1 DFD decomposes the system into the following major processes:
 	
-	\begin{enumerate}
-		\item User and Authentication Management.
-		\item Meal and Menu Management.
-		\item Attendance Management.
-		\item Food Preparation Management.
-		\item Wastage Management.
-		\item Report Generation.
+	\begin{enumerate}[leftmargin=*]
+		\item User and Authentication Management
+		\item Meal and Menu Management
+		\item Attendance Management
+		\item Food Recording
+		\item Wastage Management
+		\item Report and Analytics Management
 	\end{enumerate}
 	
-	\textit{Insert DFD Level 1 diagram here.}
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[
+%		width=\textwidth,
+%		height=0.72\textheight,
+%		keepaspectratio
+%		]{diagrams/dfd_level1.pdf}
+%		\caption{Data Flow Diagram Level 1}
+%		\label{fig:dfd-level1}
+%	\end{figure}
 	
 	\section{Structure Chart}
 	
-	The structure chart will represent the hierarchical organization of the software modules.
+	The structure chart shows the hierarchy of the main software modules.
 	
-	The proposed main modules are:
-	
-	\begin{itemize}
-		\item Authentication Module
-		\item Student Module
-		\item Meal Management Module
-		\item Attendance Module
-		\item Food Recording Module
-		\item Wastage Analysis Module
-		\item Reporting Module
-		\item Administration Module
-	\end{itemize}
-	
-	\textit{Insert Structure Chart here.}
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[
+%		width=0.90\textwidth
+%		]{diagrams/structure_chart.pdf}
+%		\caption{Structure Chart}
+%		\label{fig:structure-chart}
+%	\end{figure}
 	
 	\section{Use Case Diagram}
 	
-	The principal actors in the system are:
+	The main actors are Student, Mess Staff, and Administrator. The major use cases cover authentication, attendance, meal and menu management, food recording, wastage tracking, and reporting.
 	
-	\begin{itemize}
-		\item Student
-		\item Mess Staff
-		\item Administrator
-	\end{itemize}
-	
-	The major use cases include:
-	
-	\begin{itemize}
-		\item Login
-		\item View Menu
-		\item Mark Meal Attendance
-		\item Modify Meal Attendance
-		\item Record Food Prepared
-		\item Record Food Consumed
-		\item Record Food Wasted
-		\item View Wastage
-		\item Generate Reports
-		\item Manage Users
-		\item Manage Meals and Menus
-	\end{itemize}
-	
-	\textit{Insert Use Case Diagram here.}
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[
+%		width=\textwidth,
+%		height=0.72\textheight,
+%		keepaspectratio
+%		]{diagrams/use_case.pdf}
+%		\caption{Use Case Diagram}
+%		\label{fig:use-case}
+%	\end{figure}
 	
 	\section{State Chart Diagram}
 	
-	The state chart can represent the lifecycle of a meal record.
+	The state chart represents the lifecycle of a meal from scheduling to report generation.
 	
-	A typical sequence of states can be:
-	
-	\begin{enumerate}
-		\item Meal Scheduled
-		\item Attendance Open
-		\item Attendance Closed
-		\item Food Preparation
-		\item Meal In Progress
-		\item Meal Completed
-		\item Wastage Recorded
-		\item Report Generated
-	\end{enumerate}
-	
-	A meal may transition from one state to another depending on time, administrative actions, and completion of the meal.
-	
-	\textit{Insert State Chart Diagram here.}
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[
+%		width=0.90\textwidth
+%		]{diagrams/state_chart.pdf}
+%		\caption{State Chart of a Meal}
+%		\label{fig:state-chart}
+%	\end{figure}
 	
 	\section{Class Diagram}
 	
-	The major classes expected in the proposed system are:
+	The class diagram represents the main entities and their relationships.
 	
-	\begin{itemize}
-		\item User
-		\item Student
-		\item MessStaff
-		\item Administrator
-		\item Meal
-		\item Menu
-		\item FoodItem
-		\item Attendance
-		\item FoodRecord
-		\item WastageRecord
-		\item Report
-	\end{itemize}
+	The principal classes are \textit{User}, \textit{Student}, \textit{MessStaff}, \textit{Administrator}, \textit{Meal}, \textit{Menu}, \textit{FoodItem}, \textit{Attendance}, \textit{FoodRecord}, \textit{WastageRecord}, and \textit{Report}.
 	
-	Possible relationships include:
-	
-	\begin{itemize}
-		\item A Student records Attendance for a Meal.
-		\item A Meal has a Menu.
-		\item A Menu contains multiple FoodItems.
-		\item A Meal has FoodRecord entries.
-		\item A FoodRecord may result in a WastageRecord.
-		\item Reports are generated from stored meal and wastage information.
-		\item Administrators manage users and configuration data.
-	\end{itemize}
-	
-	\textit{Insert Class Diagram here.}
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[
+%		width=\textwidth,
+%		height=0.80\textheight,
+%		keepaspectratio
+%		]{diagrams/class_diagram.pdf}
+%		\caption{Class Diagram}
+%		\label{fig:class-diagram}
+%	\end{figure}
 	
 	% ============================================================
-	% 9. ACTIVITY NETWORK AND INTERACTION
+	% 9. BEHAVIORAL DESIGN
 	% ============================================================
 	
 	\chapter{Behavioral Design}
 	
 	\section{Activity Network Diagram}
 	
-	The activity network represents the major activities involved in managing food wastage.
+	The activity network represents the main sequence of activities involved in handling a meal.
 	
-	A representative workflow is:
-	
-	\begin{enumerate}
-		\item Create or retrieve the daily meal schedule.
-		\item Display meal information to students.
-		\item Collect expected meal attendance.
-		\item Calculate expected attendance.
-		\item Prepare food according to the estimated requirement.
-		\item Conduct the meal.
-		\item Record consumed quantity.
-		\item Record leftover or wasted quantity.
-		\item Calculate wastage.
-		\item Store the result.
-		\item Generate reports and summaries.
-	\end{enumerate}
-	
-	Several activities can be performed in parallel. For example, administrative preparation of menu information and student attendance collection may occur during overlapping time periods.
-	
-	\textit{Insert Activity Network Diagram here.}
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[
+%		width=\textwidth,
+%		height=0.72\textheight,
+%		keepaspectratio
+%		]{diagrams/activity_network.pdf}
+%		\caption{Activity Network Diagram}
+%		\label{fig:activity-network}
+%	\end{figure}
 	
 	\section{Interaction Diagram}
 	
-	The interaction diagram will show communication between the main objects involved in a selected operation.
+	The interaction diagram represents the communication between system objects when mess staff record food wastage.
 	
-	One suitable scenario is \textbf{Recording Meal Wastage}.
+	The main objects are the Mess Staff, User Interface, Food Management, Wastage Management, and Database components.
 	
-	The interaction can be described as follows:
-	
-	\begin{enumerate}
-		\item Mess staff selects the completed meal.
-		\item The user interface sends the selected meal information to the food management component.
-		\item The food management component retrieves the corresponding food records.
-		\item Mess staff enters the consumed and wasted quantities.
-		\item The system validates the entered quantities.
-		\item The system calculates the wastage value and percentage.
-		\item The system stores the wastage record in the database.
-		\item The system confirms successful recording to the user.
-	\end{enumerate}
-	
-	\textit{Insert Interaction/Communication Diagram here.}
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[
+%		width=0.90\textwidth
+%		]{diagrams/communication_diagram.pdf}
+%		\caption{Interaction/Communication Diagram for Recording Wastage}
+%		\label{fig:communication}
+%	\end{figure}
 	
 	\section{Sequence Diagram}
 	
-	A suitable sequence diagram can represent the process of a student marking attendance for a meal.
+	The sequence diagram shows the same wastage-recording operation in chronological order. It shows how messages move between the user interface, food management, wastage management, and database.
 	
-	The sequence can be described as:
-	
-	\begin{enumerate}
-		\item Student logs into the system.
-		\item System authenticates the student.
-		\item Student requests the available meals.
-		\item System retrieves the meal schedule.
-		\item Student selects a meal.
-		\item Student submits attendance.
-		\item System validates the request.
-		\item System stores the attendance record.
-		\item System updates the expected attendance count.
-		\item System displays confirmation.
-	\end{enumerate}
-	
-	An alternative sequence diagram may represent the process of recording food wastage by mess staff.
-	
-	\textit{Insert Sequence Diagram here.}
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[
+%		width=\textwidth,
+%		height=0.78\textheight,
+%		keepaspectratio
+%		]{diagrams/sequence_diagram.pdf}
+%		\caption{Sequence Diagram for Recording Food Wastage}
+%		\label{fig:sequence}
+%	\end{figure}
 	
 	% ============================================================
-	% 10. ADDITIONAL REQUIREMENT DETAILS
+	% 10. INPUT, OUTPUT AND DATA REQUIREMENTS
 	% ============================================================
 	
-	\chapter{Additional Requirement Details}
+	\chapter{Additional Requirements}
 	
 	\section{Input Requirements}
 	
-	The system may receive the following inputs:
+	The system may receive:
 	
-	\begin{itemize}
-		\item User login credentials.
-		\item Student meal attendance.
-		\item Meal schedules.
-		\item Menu and food item information.
-		\item Prepared food quantity.
-		\item Consumed food quantity.
-		\item Wasted or leftover quantity.
-		\item Administrative configuration information.
+	\begin{itemize}[leftmargin=*]
+		\item login credentials,
+		\item meal attendance,
+		\item meal and menu information,
+		\item prepared quantity,
+		\item consumed quantity,
+		\item wasted quantity, and
+		\item administrative settings.
 	\end{itemize}
 	
 	\section{Output Requirements}
 	
-	The system will provide outputs such as:
+	The system may produce:
 	
-	\begin{itemize}
-		\item Daily meal attendance.
-		\item Expected meal count.
-		\item Food preparation records.
-		\item Food wastage quantity.
-		\item Wastage percentage.
-		\item Daily wastage summary.
-		\item Weekly and monthly reports.
-		\item High-wastage meal identification.
-		\item Historical comparisons.
+	\begin{itemize}[leftmargin=*]
+		\item expected attendance,
+		\item preparation records,
+		\item wastage quantity and percentage,
+		\item daily/weekly/monthly summaries,
+		\item high-wastage meal information, and
+		\item historical comparisons.
 	\end{itemize}
 	
 	\section{Data Requirements}
 	
-	The database should maintain information regarding:
-	
-	\begin{enumerate}
-		\item Users.
-		\item User roles.
-		\item Meals.
-		\item Menus.
-		\item Food items.
-		\item Attendance.
-		\item Food preparation.
-		\item Food consumption.
-		\item Wastage.
-		\item Reports and historical records.
-	\end{enumerate}
+	The database should maintain information about users, roles, meals, menus, food items, attendance, preparation, consumption, wastage, and reports.
 	
 	% ============================================================
 	% 11. CONCLUSION AND FUTURE WORK
@@ -809,36 +659,23 @@
 	
 	\section{Conclusion}
 	
-	The Mess Food Wastage Tracker and Management System provides a systematic approach to monitoring and managing food wastage in an institutional mess.
+	The Mess Food Wastage Tracker and Management System provides a structured way to record and monitor food wastage in an institutional mess. By combining attendance data with preparation and wastage records, the system can help staff understand where unnecessary waste occurs and support better meal planning.
 	
-	The proposed system records expected attendance, food preparation, consumption, and wastage information. By maintaining historical records and generating reports, the system can help mess administrators understand wastage patterns and make more informed decisions about food preparation.
-	
-	The Agile SDLC model has been selected because it allows the system to be developed incrementally and refined according to feedback from students, mess staff, and administrators.
-	
-	The system is intended to improve operational awareness and reduce unnecessary food wastage while providing an organized record of meal-related data.
+	Agile is suitable for the project because the system can be developed incrementally and improved through feedback from its users.
 	
 	\section{Future Work}
 	
-	Several improvements can be incorporated into future versions of the system.
+	Future versions may include:
 	
-	\begin{enumerate}
-		\item \textbf{Food Demand Prediction:} Machine learning techniques can be used to predict expected meal demand from historical attendance and wastage data.
-		
-		\item \textbf{Mobile Application:} A dedicated Android or cross-platform mobile application can make meal attendance easier for students.
-		
-		\item \textbf{Notifications:} The system can send reminders to students who have not submitted meal attendance before a deadline.
-		
-		\item \textbf{Dashboard and Visualization:} Interactive charts can be added to show trends in food wastage.
-		
-		\item \textbf{Cost Analysis:} The system can estimate the monetary value associated with wasted food.
-		
-		\item \textbf{Inventory Integration:} The system can be integrated with inventory and procurement systems.
-		
-		\item \textbf{Multiple Mess Support:} A single platform can support multiple mess facilities.
-		
-		\item \textbf{Automated Measurement:} Sensors or weighing systems could be integrated to reduce manual entry of food quantities.
-		
-		\item \textbf{Sustainability Metrics:} Future versions can provide additional sustainability indicators related to food waste.
+	\begin{enumerate}[leftmargin=*]
+		\item Machine-learning based food-demand prediction.
+		\item A dedicated mobile application.
+		\item Automatic reminders for meal attendance.
+		\item Interactive dashboards and charts.
+		\item Cost estimation of wasted food.
+		\item Integration with inventory and procurement systems.
+		\item Support for multiple mess facilities.
+		\item Integration with weighing sensors for automatic measurement.
 	\end{enumerate}
 	
 	% ============================================================
@@ -847,7 +684,7 @@
 	
 	\chapter{References}
 	
-	\begin{enumerate}
+	\begin{enumerate}[leftmargin=*]
 		
 		\item IEEE Computer Society, ``IEEE Recommended Practice for Software Requirements Specifications,'' IEEE Std 830-1998, 1998.
 		
@@ -864,3 +701,4 @@
 	\end{enumerate}
 	
 \end{document}
+```
