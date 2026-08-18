@@ -395,41 +395,72 @@
 	
 	The decision tree determines whether preparation should be increased, maintained, or reduced using expected attendance and historical wastage.
 	
-%	\begin{figure}[H]
-%		\centering
-%		\includegraphics[
-%		width=0.90\textwidth
-%		]{diagrams/decision_tree.pdf}
-%		\caption{Decision Tree for Meal Preparation}
-%		\label{fig:decision-tree}
-%	\end{figure}
-	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[
+		width=\textwidth
+		]{diagrams/decision_tree.png}
+		\caption{Decision Tree for Meal Preparation}
+		\label{fig:decision-tree}
+	\end{figure}
+
+\newpage	
 	\section{Decision Table}
 	
 	The following table summarizes the same decision logic.
 	
-	\begin{table}[H]
-		\centering
-		\caption{Decision Table for Meal Preparation}
-		\small
-		\begin{tabular}{|p{4.1cm}|c|c|c|c|}
-			\hline
-			\textbf{Condition / Action} & \textbf{R1} & \textbf{R2} & \textbf{R3} & \textbf{R4}\\
-			\hline
-			Expected attendance high? & Y & Y & N & N\\
-			\hline
-			Historical wastage high? & N & Y & N & Y\\
-			\hline
-			Increase preparation & Y & N & N & N\\
-			\hline
-			Maintain preparation & N & Y & Y & N\\
-			\hline
-			Reduce preparation & N & N & N & Y\\
-			\hline
-			Review data & N & Y & N & Y\\
-			\hline
-		\end{tabular}
-	\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Decision Table for Meal Preparation}
+	\renewcommand{\arraystretch}{1.3}
+	\small
+	\begin{tabularx}{\textwidth}{|X|c|c|c|c|c|}
+		\hline
+		\textbf{Conditions / Actions}
+		& \textbf{R1}
+		& \textbf{R2}
+		& \textbf{R3}
+		& \textbf{R4}
+		& \textbf{R5} \\
+		\hline
+		
+		\textbf{Valid Selection?}
+		& No & Yes & Yes & Yes & Yes \\
+		\hline
+		
+		\textbf{Expected attendance high?}
+		& -- & Yes & Yes & No & No \\
+		\hline
+		
+		\textbf{Previous wastage high?}
+		& -- & Yes & No & -- & -- \\
+		\hline
+		
+		\textbf{Leftovers anyway?}
+		& -- & -- & -- & Yes & No \\
+		\hline
+		
+		\textbf{Display error message}
+		& X & & & & \\
+		\hline
+		
+		\textbf{Maintain order size and monitor excess}
+		& & X & & & \\
+		\hline
+		
+		\textbf{Do not change previous amount}
+		& & & X & & \\
+		\hline
+		
+		\textbf{Reduce quantity to avoid excess}
+		& & & & X & \\
+		\hline
+		
+		\textbf{Maintain exact previous volume}
+		& & & & & X \\
+		\hline
+	\end{tabularx}
+\end{table}
 	
 	% ============================================================
 	% 8. SYSTEM DESIGN

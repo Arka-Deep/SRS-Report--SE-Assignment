@@ -41,23 +41,23 @@
 \contentsline {subsection}{\numberline {6.2.7}NFR7 -- Availability}{15}{subsection.6.2.7}%
 \contentsline {chapter}{\numberline {7}Decision Analysis}{16}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Decision Tree}{16}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Decision Table}{16}{section.7.2}%
-\contentsline {chapter}{\numberline {8}System Design}{17}{chapter.8}%
-\contentsline {section}{\numberline {8.1}DFD Level 0}{17}{section.8.1}%
-\contentsline {section}{\numberline {8.2}DFD Level 1}{17}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Structure Chart}{18}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Use Case Diagram}{18}{section.8.4}%
-\contentsline {section}{\numberline {8.5}State Chart Diagram}{18}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Class Diagram}{18}{section.8.6}%
-\contentsline {chapter}{\numberline {9}Behavioral Design}{19}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Activity Network Diagram}{19}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Interaction Diagram}{19}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Sequence Diagram}{19}{section.9.3}%
-\contentsline {chapter}{\numberline {10}Additional Requirements}{20}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Input Requirements}{20}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Output Requirements}{20}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Data Requirements}{21}{section.10.3}%
-\contentsline {chapter}{\numberline {11}Conclusion and Future Work}{22}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Conclusion}{22}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Future Work}{22}{section.11.2}%
-\contentsline {chapter}{\numberline {12}References}{23}{chapter.12}%
+\contentsline {section}{\numberline {7.2}Decision Table}{17}{section.7.2}%
+\contentsline {chapter}{\numberline {8}System Design}{18}{chapter.8}%
+\contentsline {section}{\numberline {8.1}DFD Level 0}{18}{section.8.1}%
+\contentsline {section}{\numberline {8.2}DFD Level 1}{18}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Structure Chart}{19}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Use Case Diagram}{19}{section.8.4}%
+\contentsline {section}{\numberline {8.5}State Chart Diagram}{19}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Class Diagram}{19}{section.8.6}%
+\contentsline {chapter}{\numberline {9}Behavioral Design}{20}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Activity Network Diagram}{20}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Interaction Diagram}{20}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Sequence Diagram}{20}{section.9.3}%
+\contentsline {chapter}{\numberline {10}Additional Requirements}{21}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Input Requirements}{21}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Output Requirements}{21}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Data Requirements}{22}{section.10.3}%
+\contentsline {chapter}{\numberline {11}Conclusion and Future Work}{23}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Conclusion}{23}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Future Work}{23}{section.11.2}%
+\contentsline {chapter}{\numberline {12}References}{24}{chapter.12}%
