@@ -5,8 +5,20 @@
 \usepackage{helvet} % Setting a font close to Arial
 \usepackage{setspace}
 \usepackage{graphicx} % Required for inserting images
+\usepackage{tikz} % Required for page border
+\usepackage{everypage} % Required for applying border to every page
 
 \renewcommand{\familydefault}{\sfdefault}
+
+% Page border
+\AddEverypageHook{%
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[line width=1pt]
+		([xshift=0.5in,yshift=-0.5in]current page.north west)
+		rectangle
+		([xshift=-0.5in,yshift=0.5in]current page.south east);
+	\end{tikzpicture}%
+}
 
 \begin{document}
 	\thispagestyle{empty}
